@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="#A6BBC5"
+    app:cardCornerRadius="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_contact"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            tools:text="Mr Andrew Tate"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_contact"
+            app:layout_constraintTop_toTopOf="@+id/image_contact" />
+
+        <TextView
+            android:id="@+id/email_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="5dp"
+            android:lines="1"
+            tools:text="muhammadkurbonon25@mail.ru"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_email"
+            app:layout_constraintEnd_toEndOf="@+id/full_name"
+            app:layout_constraintStart_toStartOf="@+id/full_name"
+            app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+        <TextView
+            android:id="@+id/phone_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="5dp"
+            android:lines="1"
+            tools:text="+992 900000596"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_phone"
+            app:layout_constraintEnd_toEndOf="@+id/email_contact"
+            app:layout_constraintStart_toStartOf="@+id/email_contact"
+            app:layout_constraintTop_toBottomOf="@+id/email_contact" />
+
+        <TextView
+            android:id="@+id/contact_mail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingStart="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/phone_contact"
+            app:layout_constraintStart_toEndOf="@+id/imageView_female"
+            app:layout_constraintTop_toTopOf="@+id/imageView_female"
+            tools:text="femaile" />
+
+        <ImageView
+            android:id="@+id/imageView_female"
+            android:layout_width="24dp"
+            tools:src="@drawable/ic_female"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="@+id/phone_contact"
+            app:layout_constraintTop_toBottomOf="@+id/phone_contact" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
